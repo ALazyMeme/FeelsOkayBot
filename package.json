@@ -6,5 +6,8 @@
   "repository": "https://github.com/alazymeme/feelsokaybot",
   "author": "ALazyMeme <jkeasley@icloud.com>",
   "license": "MIT",
-  "packageManager": "yarn@3.0.2"
+  "packageManager": "yarn@3.0.2",
+  "dependencies": {
+    "dank-twitch-irc": "^4.3.0"
+  }
 }
