@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/alazymeme/feelsokaybot",
   "author": "ALazyMeme <jkeasley@icloud.com>",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "packageManager": "yarn@3.0.2",
   "dependencies": {
     "dank-twitch-irc": "^4.3.0"
