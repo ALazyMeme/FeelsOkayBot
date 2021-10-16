@@ -7,7 +7,7 @@ const client = new ChatClient(config.opts);
 client.use(new AlternateMessageModifier(client));
 client.on("ready", () => console.log("Successfully connected to chat"));
 client.on("close", (error) => {
-  if (error != null) {
+  if (error !== null) {
     console.error("Client closed due to error", error);
   }
 });
