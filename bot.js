@@ -17,8 +17,8 @@ client.on("PRIVMSG", (msg) => {
 });
 
 client.on("message", (msg) => {
-    if ((msg.userID === '82008718') && (msg.messageText === 'pajaS 🚨 ALERT')) {
-        client.me(msg.channelName, 'PAJAS 🚨 CUNTS');
+    if (msg.senderUserID === '82008718' && msg.messageText === 'pajaS 🚨 ALERT') {
+      client.me(msg.channelName, 'PAJAS 🚨 CUNTS');
     }
 });
 
