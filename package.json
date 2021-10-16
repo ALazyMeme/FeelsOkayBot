@@ -2,7 +2,7 @@
   "name": "FeelsOkayBot",
   "version": "1.0.0",
   "description": "A basic twitch bot",
-  "main": "index.js",
+  "main": "bot.js",
   "repository": "https://github.com/alazymeme/feelsokaybot",
   "author": "ALazyMeme <jkeasley@icloud.com>",
   "license": "GPL-3.0",
