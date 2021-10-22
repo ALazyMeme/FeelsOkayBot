@@ -12,9 +12,13 @@ let adminIDs = [
 ]
 
 let startupChannel = "alazymeme"
+const prefix = '^'
+const defaultCooldown = '10000' // 10 seconds
 
 module.exports = {
     opts: opts,
     admins: adminIDs,
-    startupChannel: startupChannel
+    startupChannel: startupChannel,
+    prefix: prefix,
+    defaultCooldown,
 };
