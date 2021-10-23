@@ -18,28 +18,40 @@ client.on("PRIVMSG", (msg) => {
 });
 
 client.on("message", (msg) => {
+  // Ignore all messages from itself'
   if (msg.senderUserID === '196500227') { 
     return;
   };
 
-  if (String(msg.messageText).toLowerCase().includes('feelsokaybot')) {
-    client.say(msg.channelName, 'why ping alazymDank');
-  };
+  const prefixExists = String(msg.messageText).startsWith('^'); // Check if prefix exists at start of message
+  const stripPrefix = String(msg.messageText).replace(/^\^/g, ''); // Strip the prefix from the message
+  const msgText = String(msg.messageText).toLowerCase(); // Convert message to lowercase
 
   if (talkedRecently.has(msg.senderUserID) && !(msg.senderUserID === '103973901')) {
     return;
   } else {
-    if (msg.senderUserID === '82008718' && msg.messageText === 'pajaS 🚨 ALERT') {
+    // "Commands" without prefixes
+    if (msg.senderUserID === '82008718' && msgText === 'pajas 🚨 alert') {
       client.me(msg.channelName, 'PAJAS 🚨 CUNTS');
     };
 
-    if (String(msg.messageText).startsWith(`${config.prefix}ping`)) {
-      client.say(msg.channelName, 'alazymDank 🏓 ppHop 🏓 MrDestructoid');
+    if (msgText.includes('feelsokaybot')) {
+      client.say(msg.channelName, 'why ping alazymDank');
     };
 
+    // Commands with prefixes
+    if (prefixExists) {
+      const noPrefix = stripPrefix.toLowerCase(); // Take the stripped message and convert to lowercase
+
+      if (noPrefix.startsWith('ping')) {
+        client.say(msg.channelName, 'alazymDank 🏓 ppHop 🏓 MrDestructoid');
+      };
+    };
+
+    // User is now in 5 second bot timeout
     talkedRecently.add(msg.senderUserID);
     setTimeout(() => {
-      // Removes the user from the set after 10 seconds
+      // Removes the user from the set after 5 seconds
       talkedRecently.delete(msg.senderUserID);
     }, config.defaultCooldown);
   };

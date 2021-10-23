@@ -13,7 +13,7 @@ let adminIDs = [
 
 let startupChannel = "alazymeme"
 const prefix = '^'
-const defaultCooldown = '10000' // 10 seconds
+const defaultCooldown = '5000' // 5 seconds
 
 module.exports = {
     opts: opts,
