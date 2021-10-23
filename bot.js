@@ -26,6 +26,7 @@ client.on("message", (msg) => {
   const prefixExists = String(msg.messageText).startsWith('^'); // Check if prefix exists at start of message
   const stripPrefix = String(msg.messageText).replace(/^\^/g, ''); // Strip the prefix from the message
   const msgText = String(msg.messageText).toLowerCase(); // Convert message to lowercase
+  let cooldown = config.defaultCooldown;
 
   if (talkedRecently.has(msg.senderUserID) && !(msg.senderUserID === '103973901')) {
     return;
@@ -53,7 +54,7 @@ client.on("message", (msg) => {
     setTimeout(() => {
       // Removes the user from the set after 5 seconds
       talkedRecently.delete(msg.senderUserID);
-    }, config.defaultCooldown);
+    }, cooldown);
   };
 });
 
