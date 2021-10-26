@@ -5,6 +5,10 @@ const config = require("./config");
 const client = new ChatClient(config.opts);
 const talkedRecently = new Set()
 
+function isUpperCase(str) {
+  return str === str.toUpperCase();
+};
+
 client.use(new AlternateMessageModifier(client));
 client.on("ready", () => console.log("Successfully connected to chat"));
 client.on("close", (error) => {
@@ -31,6 +35,10 @@ client.on("message", (msg) => {
   if (talkedRecently.has(msg.senderUserID) && !(msg.senderUserID === '103973901')) {
     return;
   } else {
+    if (String(msg.messageText).isUpperCase()) {
+      client.say(msg.channelName, `Why must you yell ${msg.senderUsername}? FeelsBadMan`)
+    };
+
     // "Commands" without prefixes
     if (msg.senderUserID === '82008718' && msgText === 'pajas 🚨 alert') {
       client.me(msg.channelName, 'PAJAS 🚨 CUNTS');
