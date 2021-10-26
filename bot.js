@@ -35,8 +35,8 @@ client.on("message", (msg) => {
   if (talkedRecently.has(msg.senderUserID) && !(msg.senderUserID === '103973901')) {
     return;
   } else {
-    if (String(msg.messageText).isUpperCase()) {
-      client.say(msg.channelName, `Why must you yell ${msg.senderUsername}? FeelsBadMan`)
+    if (isUpperCase(String(msg.messageText))) {
+      client.say(msg.channelName, `Why must you yell ${msg.displayName}? FeelsBadMan`)
     };
 
     // "Commands" without prefixes
