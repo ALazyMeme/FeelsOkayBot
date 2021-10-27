@@ -68,4 +68,4 @@ client.on("connect", () => {
 });
 
 client.connect();
-client.join("pajlada");
+client.joinAll(config.channels);
