@@ -3,7 +3,7 @@
 const { ChatClient, AlternateMessageModifier } = require("dank-twitch-irc");
 const config = require("./config");
 const client = new ChatClient(config.opts);
-const talkedRecently = new Set()
+const talkedRecently = new Set();
 
 function isUpperCase(str) {
   return str === str.toUpperCase();
