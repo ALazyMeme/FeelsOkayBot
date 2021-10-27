@@ -56,6 +56,10 @@ client.on("message", (msg) => {
       if (noPrefix.startsWith('ping')) {
         client.say(msg.channelName, 'alazymDank 🏓 ppHop 🏓 MrDestructoid');
       };
+
+      if (noPrefix.startsWith('echo') && msg.senderUserID === '103973901') {
+        client.say(msg.channelName, stripPrefix.replace(/^echo/gi,''));
+      };
     };
 
     // User is now in 5 second bot timeout
