@@ -40,8 +40,8 @@ client.on("message", (msg) => {
     return;
   } else {
 
-    if (msg.senderUserID === '82008718' && msgText === 'pajas 🚨 alert') {
     // Commands without prefixes
+    if (msg.senderUserID === '82008718' && msgText === 'pajas 🚨 alert' && msg.channelID === '11148817') {
       client.me(msg.channelName, 'PAJAS 🚨 CUNTS');
     };
 
