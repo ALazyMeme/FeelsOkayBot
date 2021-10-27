@@ -9,6 +9,10 @@ function isUpperCase(str) {
   return str === str.toUpperCase();
 };
 
+function isLowerCase(str) {
+  return str === str.toLowerCase();
+};
+
 client.use(new AlternateMessageModifier(client));
 client.on("ready", () => console.log("Successfully connected to chat"));
 client.on("close", (error) => {
