@@ -26,7 +26,7 @@ client.on("PRIVMSG", (msg) => {
 });
 
 client.on("message", (msg) => {
-  // Ignore all messages from itself'
+  // Ignore all messages from itself
   if (msg.senderUserID === '196500227') { 
     return;
   };
@@ -41,6 +41,7 @@ client.on("message", (msg) => {
   } else {
 
     // Commands without prefixes
+    // 11148817 = pajlada
     if (msg.senderUserID === '82008718' && msgText === 'pajas 🚨 alert' && msg.channelID === '11148817') {
       client.me(msg.channelName, 'PAJAS 🚨 CUNTS');
     };
@@ -49,7 +50,8 @@ client.on("message", (msg) => {
       client.say(msg.channelName, 'why ping alazymDank');
     };
 
-    if (msgText.startsWith('test') && msg.channelID === ('11148817' || '103973901')) {
+    // 11148817 = pajlada, 103973901 = alazymeme
+    if (msgText.startsWith('test') && msg.channelID === '11148817' || msg.channelID === '103973901') {
       client.say(msg.channelName, 'KKarrot test complete KKarrot')
     };
 
