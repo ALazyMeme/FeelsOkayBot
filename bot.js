@@ -49,7 +49,7 @@ client.on("message", (msg) => {
       client.say(msg.channelName, 'why ping alazymDank');
     };
 
-    if (msgText.startsWith('test')) {
+    if (msgText.startsWith('test') && msg.channelID === ('11148817' || '103973901')) {
       client.say(msg.channelName, 'KKarrot test complete KKarrot')
     };
 
