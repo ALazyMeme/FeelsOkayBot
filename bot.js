@@ -50,7 +50,7 @@ client.on("message", (msg) => {
     };
 
     if (msgText.startsWith('test') && msg.channelID === '11148817') {
-      client.say(msg.channelName, 'Test complate KKarrot')
+      client.say(msg.channelName, 'KKarrot test complate KKarrot')
     };
 
     // Commands with prefixes
