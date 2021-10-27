@@ -14,6 +14,7 @@ let adminIDs = [
 let startupChannel = "alazymeme";
 const prefix = '^';
 const defaultCooldown = '5000'; // 5 seconds
+const ownerID = '103973901';
 const channels = [
     'pajlada',
     'kattah',
@@ -27,5 +28,6 @@ module.exports = {
     startupChannel: startupChannel,
     prefix: prefix,
     defaultCooldown,
+    ownerID,
     channels,
 };

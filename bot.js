@@ -13,6 +13,10 @@ function isLowerCase(str) {
   return str === str.toLowerCase();
 };
 
+function pajladaID() {
+  return '11148817';
+};
+
 client.use(new AlternateMessageModifier(client));
 client.on("ready", () => console.log("Successfully connected to chat"));
 client.on("close", (error) => {
@@ -36,13 +40,13 @@ client.on("message", (msg) => {
   const msgText = String(msg.messageText).toLowerCase(); // Convert message to lowercase
   let cooldown = config.defaultCooldown;
 
-  if (talkedRecently.has(msg.senderUserID) && !(msg.senderUserID === '103973901')) {
+  if (talkedRecently.has(msg.senderUserID) && !(msg.senderUserID === config.ownerID)) {
     return;
   } else {
 
     // Commands without prefixes
-    // 11148817 = pajlada
-    if (msg.senderUserID === '82008718' && msgText === 'pajas 🚨 alert' && msg.channelID === '11148817') {
+    // 82008718 = pajbot
+    if (msg.senderUserID === '82008718' && msgText === 'pajas 🚨 alert' && msg.channelID === pajladaID()) {
       client.me(msg.channelName, 'PAJAS 🚨 CUNTS');
     };
 
@@ -50,8 +54,8 @@ client.on("message", (msg) => {
       client.say(msg.channelName, 'why ping alazymDank');
     };
 
-    // 11148817 = pajlada, 103973901 = alazymeme
-    if (msgText.startsWith('test') && msg.channelID === '11148817' || msg.channelID === '103973901') {
+    // 11148817 = pajlada
+    if (msgText.startsWith('test') && msg.channelID === pajladaID() || msg.channelID === config.ownerID) {
       client.say(msg.channelName, 'KKarrot test complete KKarrot')
     };
 
@@ -63,7 +67,7 @@ client.on("message", (msg) => {
         client.say(msg.channelName, 'alazymDank 🏓 ppHop 🏓 MrDestructoid');
       };
 
-      if (noPrefix.startsWith('echo') && msg.senderUserID === '103973901') {
+      if (noPrefix.startsWith('echo') && msg.senderUserID === config.ownerID) {
         client.say(msg.channelName, stripPrefix.replace(/^echo/gi,''));
       };
     };
