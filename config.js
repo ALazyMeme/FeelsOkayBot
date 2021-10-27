@@ -9,11 +9,11 @@ const opts = {
 
 let adminIDs = [
     "103973901" // ALazyMeme
-]
+];
 
-let startupChannel = "alazymeme"
-const prefix = '^'
-const defaultCooldown = '5000' // 5 seconds
+let startupChannel = "alazymeme";
+const prefix = '^';
+const defaultCooldown = '5000'; // 5 seconds
 
 module.exports = {
     opts: opts,
