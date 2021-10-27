@@ -49,8 +49,8 @@ client.on("message", (msg) => {
       client.say(msg.channelName, 'why ping alazymDank');
     };
 
-    if (msgText.startsWith('test') && msg.channelID === '11148817') {
-      client.say(msg.channelName, 'KKarrot test complate KKarrot')
+    if (msgText.startsWith('test')) {
+      client.say(msg.channelName, 'KKarrot test complete KKarrot')
     };
 
     // Commands with prefixes
