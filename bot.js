@@ -49,6 +49,10 @@ client.on("message", (msg) => {
       client.say(msg.channelName, 'why ping alazymDank');
     };
 
+    if (msgText.startsWith('test') && msg.channelID === '11148817') {
+      client.say(msg.channelName, 'Test complate KKarrot')
+    };
+
     // Commands with prefixes
     if (prefixExists) {
       const noPrefix = stripPrefix.toLowerCase(); // Take the stripped message and convert to lowercase
