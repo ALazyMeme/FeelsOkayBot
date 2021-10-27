@@ -50,7 +50,7 @@ client.on(`message`, (msg) => {
       client.say(msg.channelName, `why ping alazymDank`);
     };
 
-    if (msgText.startsWith(`test`) && msg.channelID === pajladaID || msg.channelID === config.ownerID) {
+    if (msgText.startsWith(`test`) && (msg.channelID === pajladaID || msg.channelID === config.ownerID)) {
       client.say(msg.channelName, `KKarrot test complete KKarrot`)
     };
 
