@@ -18,6 +18,7 @@ const channels = [
     'pajlada',
     'kattah',
     'alazymeme',
+    'weest',
 ];
 
 module.exports = {
