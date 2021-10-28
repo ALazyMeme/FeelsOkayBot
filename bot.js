@@ -50,20 +50,31 @@ client.on(`message`, (msg) => {
       client.say(msg.channelName, `why ping alazymDank`);
     };
 
-    if (msgText.startsWith(`test`) && (msg.channelID === pajladaID || msg.channelID === config.ownerID)) {
+    if (msgText.split(" ")[0] === `test` && (msg.channelID === pajladaID || msg.channelID === config.ownerID)) {
       client.say(msg.channelName, `KKarrot test complete KKarrot`)
     };
 
     // Commands with prefixes
     if (prefixExists) {
       const noPrefix = stripPrefix.toLowerCase(); // Take the stripped message and convert to lowercase
+      const command = noPrefix.split(' ')[0];
 
-      if (noPrefix.startsWith(`ping`)) {
+      if (command === `ping`) {
         client.say(msg.channelName, `alazymDank 🏓 ppHop 🏓 MrDestructoid`);
       };
 
-      if (noPrefix.startsWith(`echo`) && msg.senderUserID === config.ownerID) {
+      if (command === `echo` && msg.senderUserID === config.ownerID) {
         client.say(msg.channelName, stripPrefix.replace(/^echo/gi,``));
+      };
+
+      if (command === 'pingthemods' && msg.senderUserID == config.ownerID) {
+        let mods = client.privmsg(`#${msg.channelNamel}`, '.mods');
+        console.log(mods);
+      };
+
+      if (command === 'pingthevips' && msg.senderUserID == config.ownerID) {
+        let vips = client.privmsg(`#${msg.channelNamel}`, '.vips');
+        console.log(vips);
       };
     };
 
