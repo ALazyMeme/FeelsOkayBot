@@ -67,12 +67,12 @@ client.on(`message`, async (msg) => {
         client.say(msg.channelName, stripPrefix.replace(/^echo/gi,``));
       };
 
-      if (command === 'pingthemods' && msg.senderUserID == config.ownerID) {
+      if (command === 'pingthemods' && msg.senderUserID === config.ownerID) {
         let mods = await client.getMods(`#${msg.channelNamel}`);
         console.log(mods);
       };
 
-      if (command === 'pingthevips' && msg.senderUserID == config.ownerID) {
+      if (command === 'pingthevips' && msg.senderUserID === config.ownerID) {
         let vips = await client.getVips(`#${msg.channelNamel}`);
         console.log(vips);
       };
