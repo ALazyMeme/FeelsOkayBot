@@ -68,12 +68,12 @@ client.on(`message`, async (msg) => {
       };
 
       if (command === 'pingthemods' && msg.senderUserID == config.ownerID) {
-        let mods = await client.privmsg(`#${msg.channelNamel}`, `/mods`);
+        let mods = await client.getMods(`#${msg.channelNamel}`);
         console.log(mods);
       };
 
       if (command === 'pingthevips' && msg.senderUserID == config.ownerID) {
-        let vips = await client.privmsg(`#${msg.channelNamel}`, `/vips`);
+        let vips = await client.getVips(`#${msg.channelNamel}`);
         console.log(vips);
       };
     };
