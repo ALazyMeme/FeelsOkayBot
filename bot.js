@@ -26,7 +26,7 @@ client.on(`PRIVMSG`, (msg) => {
   console.log(`[#${msg.channelName}] ${msg.displayName}: ${msg.messageText}`);
 });
 
-client.on(`message`, (msg) => {
+client.on(`message`, async (msg) => {
   // Ignore all messages from itself
   if (msg.senderUserID === config.botID) { 
     return;
@@ -68,12 +68,12 @@ client.on(`message`, (msg) => {
       };
 
       if (command === 'pingthemods' && msg.senderUserID == config.ownerID) {
-        let mods = client.privmsg(`#${msg.channelNamel}`, '.mods');
+        let mods = await client.privmsg(`#${msg.channelNamel}`, `/mods`);
         console.log(mods);
       };
 
       if (command === 'pingthevips' && msg.senderUserID == config.ownerID) {
-        let vips = client.privmsg(`#${msg.channelNamel}`, '.vips');
+        let vips = await client.privmsg(`#${msg.channelNamel}`, `/vips`);
         console.log(vips);
       };
     };
