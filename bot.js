@@ -41,6 +41,10 @@ client.on(`message`, async (msg) => {
     return;
   } else {
     // Commands without prefixes
+    if (msg.senderUserID === `96017440` && msgText === `it's green!`) {
+      client.say(msg.channelName, `!redeem`)
+    };
+
     // 82008718 = pajbot
     if (msg.senderUserID === `82008718` && msgText === `pajas 🚨 alert` && msg.channelID === pajladaID) {
       client.me(msg.channelName, `PAJAS 🚨 CUNTS`);
