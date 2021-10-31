@@ -46,6 +46,16 @@ client.on(`message`, async (msg) => {
       client.me(msg.channelName, `PAJAS 🚨 CUNTS`);
     };
 
+    // 477589350 = slchbot
+    if (msg.senderUserID === `477589350` && msgText === `pepegasit nevermind`) {
+      client.say(msg.channelName, `alazymDank Slapp slchbot`)
+    };
+
+    // 477589350 = slchbot
+    if (msg.senderUserID === `477589350` && msgText === `pepea pajbot`) {
+      client.say(msg.channelName, `monkaS it's coming`)
+    };
+
     if (msgText.includes(`feelsokaybot`)) {
       client.say(msg.channelName, `why ping alazymDank`);
     };
