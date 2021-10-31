@@ -17,7 +17,6 @@ const channels = [
     `kattah`,
     `alazymeme`,
     `weest`,
-    `teamspeak_tv`,
 ];
 
 module.exports = {
