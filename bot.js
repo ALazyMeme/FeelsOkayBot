@@ -88,7 +88,10 @@ client.on(`message`, async (msg) => {
       };
 
       if (command === 'spam' && msg.senderUserID === config.ownerID) {
-        client.say(msg.channelName, stripPrefix.replace(/^spam/gi,'')[0] * stripPrefix.replace(/^spam/gi,'')[1])
+        var commandArguments = stripPrefix.replace(/^spam/gi,'')
+        var spamText = commandArguments[0]
+        var spamTimes = commandArguments[1]
+        client.say(msg.channelName, spamText) * spamTimes
       };
     };
 
