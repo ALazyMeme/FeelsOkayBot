@@ -89,8 +89,8 @@ client.on(`message`, async (msg) => {
       };
 
       if (command === 'spam' && msg.senderUserID === config.ownerID) {
-        var spamText = noCommand[0]
-        var spamTimes = noCommand[-1]
+        var spamText = noCommand.splice(0)
+        var spamTimes = noCommand.splice(-1)
         console.log(spamText);
         console.log(spamTimes);
         // client.say(msg.channelName, spamText) * spamTimes
