@@ -88,7 +88,7 @@ client.on(`message`, async (msg) => {
       };
 
       if (command === 'spam' && msg.senderUserID === config.ownerID) {
-        var commandArguments = stripPrefix.replace(/^spam/gi,'')
+        var commandArguments = stripPrefix.replace(/^spam /gi,'')
         var spamText = commandArguments[0]
         var spamTimes = commandArguments[1]
         console.log(spamText);
