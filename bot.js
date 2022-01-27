@@ -90,7 +90,7 @@ client.on(`message`, async (msg) => {
       if (command === 'spam' && msg.senderUserID === config.ownerID) {
         var spamTimes = noCommand.pop()
         var spamText = noCommand.splice(0).join(" ")
-        client.say(msg.channelName, spamText) * spamTimes
+        client.say(msg.channelName, spamText).repeat(spamTimes)
       };
     };
 
