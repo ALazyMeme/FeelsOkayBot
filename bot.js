@@ -86,6 +86,10 @@ client.on(`message`, async (msg) => {
         let vips = await client.getVips(`#${msg.channelNamel}`);
         console.log(vips);
       };
+
+      if (command === 'spam' && msg.senderUserID === config.ownerID) {
+        client.say (msg.channelName, stripPrefix.replace(/^spam/gi,'')[0] * stripPrefix.replace(/^spam/gi,'')[1])
+      };
     };
 
     // User is now in 5 second bot timeout
