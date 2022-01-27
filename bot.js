@@ -68,6 +68,7 @@ client.on(`message`, async (msg) => {
     if (prefixExists) {
       const noPrefix = stripPrefix.toLowerCase(); // Take the stripped message and convert to lowercase
       const command = noPrefix.split(' ')[0];
+      const noCommand = noPrefix.split(' ').slice(1)
 
       if (command === `ping`) {
         client.say(msg.channelName, `alazymDank 🏓 ppHop 🏓 MrDestructoid`);
@@ -88,9 +89,8 @@ client.on(`message`, async (msg) => {
       };
 
       if (command === 'spam' && msg.senderUserID === config.ownerID) {
-        var commandArguments = stripPrefix.replace(/^spam /gi,'')
-        var spamText = commandArguments[0]
-        var spamTimes = commandArguments[1]
+        var spamText = noCommand[0]
+        var spamTimes = noCommand[-1]
         console.log(spamText);
         console.log(spamTimes);
         // client.say(msg.channelName, spamText) * spamTimes
