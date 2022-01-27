@@ -91,7 +91,9 @@ client.on(`message`, async (msg) => {
         var commandArguments = stripPrefix.replace(/^spam/gi,'')
         var spamText = commandArguments[0]
         var spamTimes = commandArguments[1]
-        client.say(msg.channelName, spamText) * spamTimes
+        console.log(spamText);
+        console.log(spamTimes);
+        // client.say(msg.channelName, spamText) * spamTimes
       };
     };
 
