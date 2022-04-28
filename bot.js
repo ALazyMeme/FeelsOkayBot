@@ -76,25 +76,6 @@ client.on(`message`, async (msg) => {
       if (command === `echo` && msg.senderUserID === config.ownerID) {
         client.say(msg.channelName, stripPrefix.replace(/^echo/gi,``));
       };
-
-      if (command === 'pingthemods' && msg.senderUserID === config.ownerID) {
-        let mods = await client.getMods(`#${msg.channelNamel}`);
-        console.log(mods);
-      };
-
-      if (command === 'pingthevips' && msg.senderUserID === config.ownerID) {
-        let vips = await client.getVips(`#${msg.channelNamel}`);
-        console.log(vips);
-      };
-
-      if (command === 'spam' && msg.senderUserID === config.ownerID) {
-        var spamTimes = noCommand.pop()
-        var spamText = noCommand.splice(0).join(" ")
-        while (spamTimes > 0) {
-          client.say(msg.channelName, spamText);
-          spamTimes - 1
-        }
-      };
     };
 
     // User is now in 5 second bot timeout
