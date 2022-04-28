@@ -70,7 +70,7 @@ client.on(`message`, async (msg) => {
       const noCommand = noPrefix.split(' ').slice(1) // Remove the command
 
       if (command === `ping`) {
-        client.say(msg.channelName, `alazymDank 🏓 ppHop 🏓 MrDestructoid`);
+        client.say(msg.channelName, `alazymDank 🏓 alazymHop 🏓 MrDestructoid`);
       };
 
       if (command === `echo` && msg.senderUserID === config.ownerID) {
