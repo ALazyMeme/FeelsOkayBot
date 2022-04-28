@@ -2,10 +2,31 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 4
+  version: 6
   cacheKey: 8
 
-"@types/debug@npm:^4.1.5":
+"@kararty/dank-twitch-irc@npm:4.6.0":
+  version: 4.6.0
+  resolution: "@kararty/dank-twitch-irc@npm:4.6.0"
+  dependencies:
+    "@types/debug": ^4.1.7
+    "@types/duplexify": ^3.6.1
+    debug-logger: ^0.4.1
+    duplexify: ^4.1.2
+    eventemitter3: ^4.0.7
+    lodash.camelcase: ^4.3.0
+    lodash.pickby: ^4.6.0
+    make-error-cause: ^2.3.0
+    ms: ^2.1.3
+    randombytes: ^2.1.0
+    semaphore-async-await: ^1.5.1
+    simple-websocket: ^9.1.0
+    split2: ^4.1.0
+  checksum: 033acb02ca0cd8d45e5490057f8033478424b21fd45fcb65f3e239164286c417c61325863617894daec79ec719ac58bc515ce5b2c910876460f4c67aa3f938ef
+  languageName: node
+  linkType: hard
+
+"@types/debug@npm:^4.1.7":
   version: 4.1.7
   resolution: "@types/debug@npm:4.1.7"
   dependencies:
@@ -14,12 +35,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/duplexify@npm:^3.6.0":
-  version: 3.6.0
-  resolution: "@types/duplexify@npm:3.6.0"
+"@types/duplexify@npm:^3.6.1":
+  version: 3.6.1
+  resolution: "@types/duplexify@npm:3.6.1"
   dependencies:
     "@types/node": "*"
-  checksum: 2cc557506bcb847fc207c3abbf44a0f82331ed07a347bfc5524975eba3a6d8ce52d841521b857d037a448cf6f2fbcbc628c46e259729cd12d6e32558ce0b33ac
+  checksum: 33c43ab4d1d32a2f941d534d65db2cd1c3f93d6a668b00a378585a4d7ec1226f470629e4f8538f9020d0aa7c3dec1847d871fe195c33bbc7d515cb55c66264b7
   languageName: node
   linkType: hard
 
@@ -31,9 +52,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 16.11.0
-  resolution: "@types/node@npm:16.11.0"
-  checksum: 194ae80ec72f664e15e03c33f116be96aa1e85b167a19e31003c53ddfc36dabd65744e9a76c1d46b7ce2e5981d2ccb8e84a85c3ec9ac89f1471daaa885bdcfd0
+  version: 17.0.29
+  resolution: "@types/node@npm:17.0.29"
+  checksum: bb9d7bce9d6d3882efd9d63b773b548dce98df4bd57eff8ceaa316aa2f3346e36d3618764cc93da84bbff92005174a35eec3465cde91ee973ef1c351ffa40074
   languageName: node
   linkType: hard
 
@@ -41,38 +62,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "FeelsOkayBot@workspace:."
   dependencies:
-    dank-twitch-irc: ^4.3.0
+    "@kararty/dank-twitch-irc": 4.6.0
   languageName: unknown
   linkType: soft
-
-"array-uniq@npm:1.0.2":
-  version: 1.0.2
-  resolution: "array-uniq@npm:1.0.2"
-  checksum: 8c4beb94aa183791da1e155935aba4df3fe2eeb6f491c69e666ca7351f897b9b260fa04d016e0ce766ae8280129c16f11071e17359c81c01741289009bb5ac6d
-  languageName: node
-  linkType: hard
-
-"dank-twitch-irc@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "dank-twitch-irc@npm:4.3.0"
-  dependencies:
-    "@types/debug": ^4.1.5
-    "@types/duplexify": ^3.6.0
-    debug-logger: ^0.4.1
-    duplexify: ^4.1.1
-    eventemitter3: ^4.0.7
-    lodash.camelcase: ^4.3.0
-    lodash.pickby: ^4.6.0
-    make-error-cause: ^2.3.0
-    ms: ^2.1.3
-    randomstring: ^1.1.5
-    semaphore-async-await: ^1.5.1
-    simple-websocket: ^9.0.0
-    split2: ^3.2.1
-    ts-toolbelt: ^8.0.3
-  checksum: 6d91eb8046b8fdd6884488334c739338ea8db262984722ea89a52fd25cc42c06607f18f86463788b1ccfef3527311a5c47c48196dc8f0dbd011b1caf70f6010d
-  languageName: node
-  linkType: hard
 
 "debug-logger@npm:^0.4.1":
   version: 0.4.1
@@ -93,18 +85,18 @@ __metadata:
   linkType: hard
 
 "debug@npm:^4.3.1":
-  version: 4.3.2
-  resolution: "debug@npm:4.3.2"
+  version: 4.3.4
+  resolution: "debug@npm:4.3.4"
   dependencies:
     ms: 2.1.2
   peerDependenciesMeta:
     supports-color:
       optional: true
-  checksum: 820ea160e267e23c953c9ed87e7ad93494d8cda2f7349af5e7e3bb236d23707ee3022f477d5a7d2ee86ef2bf7d60aa9ab22d1f58080d7deb9dccd073585e1e43
+  checksum: 3dbad3f94ea64f34431a9cbf0bafb61853eda57bff2880036153438f50fb5a84f27683ba0d8e5426bf41a8c6ff03879488120cf5b3a761e77953169c0600a708
   languageName: node
   linkType: hard
 
-"duplexify@npm:^4.1.1":
+"duplexify@npm:^4.1.2":
   version: 4.1.2
   resolution: "duplexify@npm:4.1.2"
   dependencies:
@@ -206,13 +198,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"randombytes@npm:2.0.3":
-  version: 2.0.3
-  resolution: "randombytes@npm:2.0.3"
-  checksum: 13e1abd143404dd87024bf345fb1a446b2e2ee46d8e1a5a073e8370c9b1e58000d81a97d4327ba7089087213eb6d8c77fa67ab4e91aa00605126d634fcccb9d4
-  languageName: node
-  linkType: hard
-
 "randombytes@npm:^2.1.0":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -222,19 +207,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"randomstring@npm:^1.1.5":
-  version: 1.2.1
-  resolution: "randomstring@npm:1.2.1"
-  dependencies:
-    array-uniq: 1.0.2
-    randombytes: 2.0.3
-  bin:
-    randomstring: bin/randomstring
-  checksum: 501da2ec59638d502dbb66c237ab80790dbb0b50b493347cbf6abc2dfbf6fe08f195d85e37911689bc406f85d31cf9826757398b5af8c9cae7c0ad4f808f3ac0
-  languageName: node
-  linkType: hard
-
-"readable-stream@npm:^3.0.0, readable-stream@npm:^3.1.1, readable-stream@npm:^3.6.0":
+"readable-stream@npm:^3.1.1, readable-stream@npm:^3.6.0":
   version: 3.6.0
   resolution: "readable-stream@npm:3.6.0"
   dependencies:
@@ -259,7 +232,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simple-websocket@npm:^9.0.0":
+"simple-websocket@npm:^9.1.0":
   version: 9.1.0
   resolution: "simple-websocket@npm:9.1.0"
   dependencies:
@@ -272,12 +245,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"split2@npm:^3.2.1":
-  version: 3.2.2
-  resolution: "split2@npm:3.2.2"
-  dependencies:
-    readable-stream: ^3.0.0
-  checksum: 8127ddbedd0faf31f232c0e9192fede469913aa8982aa380752e0463b2e31c2359ef6962eb2d24c125bac59eeec76873678d723b1c7ff696216a1cd071e3994a
+"split2@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "split2@npm:4.1.0"
+  checksum: ec581597cb74c13cdfb5e2047543dd40cb1e8e9803c7b1e0c29ede05f2b4f049b2d6e7f2788a225d544549375719658b8f38e9366364dec35dc7a12edfda5ee5
   languageName: node
   linkType: hard
 
@@ -297,13 +268,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-toolbelt@npm:^8.0.3":
-  version: 8.4.0
-  resolution: "ts-toolbelt@npm:8.4.0"
-  checksum: 12e97e781dd0228e3a13f01f10752b8d65f4bb6c1168b55da0c9c651a12c8178cbc66207a92670abeffe095066ed3133c3c89e6d45b94ec132b6ab87e0a1d328
-  languageName: node
-  linkType: hard
-
 "util-deprecate@npm:^1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -319,8 +283,8 @@ __metadata:
   linkType: hard
 
 "ws@npm:^7.4.2":
-  version: 7.5.5
-  resolution: "ws@npm:7.5.5"
+  version: 7.5.7
+  resolution: "ws@npm:7.5.7"
   peerDependencies:
     bufferutil: ^4.0.1
     utf-8-validate: ^5.0.2
@@ -329,6 +293,6 @@ __metadata:
       optional: true
     utf-8-validate:
       optional: true
-  checksum: bd2b437256012af526c69c03d6670a132e7ab0fe5853f3b7092826acea4203fad4ee2a8d0d9bd44834b2b968e747bf34f753ab535f4a3edf40d262da4b1d0805
+  checksum: 5c1f669a166fb57560b4e07f201375137fa31d9186afde78b1508926345ce546332f109081574ddc4e38cc474c5406b5fc71c18d71eb75f6e2d2245576976cba
   languageName: node
   linkType: hard
