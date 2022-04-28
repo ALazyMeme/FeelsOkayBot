@@ -4,7 +4,7 @@
   "description": "A basic twitch bot",
   "main": "bot.js",
   "repository": "https://github.com/alazymeme/feelsokaybot",
-  "author": "ALazyMeme <jkeasley@icloud.com>",
+  "author": "ALazyMeme",
   "license": "GPL-3.0",
   "packageManager": "yarn@3.0.2",
   "dependencies": {
