@@ -1,6 +1,6 @@
 `use strict`;
 
-const { ChatClient, AlternateMessageModifier } = require(`dank-twitch-irc`);
+const { ChatClient, AlternateMessageModifier } = require(`@kararty/dank-twitch-irc`);
 const config = require(`./config`);
 const client = new ChatClient(config.opts);
 const talkedRecently = new Set();
