@@ -76,6 +76,10 @@ client.on(`message`, async (msg) => {
       if (command === `echo` && msg.senderUserID === config.ownerID) {
         client.say(msg.channelName, stripPrefix.replace(/^echo/gi,``));
       };
+
+      if (command == `pong`) {
+        client.say(msg.channelName, `No pong 😡`)
+      };
     };
 
     // User is now in 5 second bot timeout
