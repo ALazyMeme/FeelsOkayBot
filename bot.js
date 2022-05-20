@@ -46,6 +46,11 @@ client.on(`message`, async (msg) => {
       client.me(msg.channelName, `PAJAS 🚨 CUNTS`);
     };
 
+    // 735710379 = borrowbot
+    if (msg.senderUserID === `103973901` && msgText.startsWith(`/announce`)) {
+      client.say(msg.channelName, `/announce ℱ`)
+    }
+
     // 477589350 = slchbot
     if (msg.senderUserID === `477589350` && msgText === `pepegasit nevermind`) {
       client.say(msg.channelName, `alazymDank Slapp slchbot`)
