@@ -47,7 +47,7 @@ client.on(`message`, async (msg) => {
     };
 
     // 735710379 = borrowbot
-    if (msg.senderUserID === `103973901` && msgText.startsWith(`/announce`)) {
+    if (msg.senderUserID === `735710379` && msgText.startsWith(`/announce`)) {
       let announceMessages = [`gopherDeadlock`, `/announce ℱ`];
       let announceResponse = announceMessages[Math.floor(Math.random()*announceMessages.length)];
       client.say(msg.channelName, `${announceResponse}`)
