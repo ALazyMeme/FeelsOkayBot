@@ -1,19 +1,11 @@
 `use strict`;
 
 const { ChatClient, AlternateMessageModifier } = require(`@kararty/dank-twitch-irc`);
-const sleep = require(`system-sleep`);
 const config = require(`./config`);
 const client = new ChatClient(config.opts);
 const talkedRecently = new Set();
 const pajladaID = `11148817`;
-
-function isUpperCase(str) {
-  return str === str.toUpperCase();
-};
-
-function isLowerCase(str) {
-  return str === str.toLowerCase();
-};
+let pajbotAnnounce = false;
 
 client.use(new AlternateMessageModifier(client));
 client.on(`ready`, () => console.log(`Successfully connected to chat`));
@@ -48,14 +40,15 @@ client.on(`message`, async (msg) => {
     };
 
     if (msg.senderUserID === `82008718` && msgText.startsWith(`/announce`)) {
-      var pajbotAnnounce = true
-      sleep(5*1000); // Sleep for 5 seconds
-      var pajbotAnnounce = false
+      pajbotAnnounce = true;
+      setTimeout(function () {
+        pajbotAnnounce = false;
+      }, 5*1000);
     };
 
     // 735710379 = borrowbot
     if (msg.senderUserID === `735710379` && msgText.startsWith(`/announce`)) {
-      if (pajbotAnnounce == true) {
+      if (pajbotAnnounce) {
         let announceMessages = [`gopherDeadlock`, `/announce ℱ`];
         let announceResponse = announceMessages[Math.floor(Math.random()*announceMessages.length)];
         client.say(msg.channelName, `${announceResponse}`)
