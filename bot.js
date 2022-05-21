@@ -1,11 +1,11 @@
 `use strict`;
 
 const { ChatClient, AlternateMessageModifier } = require(`@kararty/dank-twitch-irc`);
+const sleep = require(`system-sleep`);
 const config = require(`./config`);
 const client = new ChatClient(config.opts);
 const talkedRecently = new Set();
 const pajladaID = `11148817`;
-const sleep = (waitTimeInMs) => new Promise(resolve => setTimeout(resolve, waitTimeInMs));
 
 function isUpperCase(str) {
   return str === str.toUpperCase();
@@ -49,7 +49,7 @@ client.on(`message`, async (msg) => {
 
     if (msg.senderUserID === `82008718` && msg.msgText.startsWith(`/announce`)) {
       var pajbotAnnounce = true
-      await sleep(5000)
+      sleep(5*1000); // Sleep for 5 seconds
       var pajbotAnnounce = false
     };
 
