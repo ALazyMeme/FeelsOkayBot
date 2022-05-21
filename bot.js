@@ -5,6 +5,7 @@ const config = require(`./config`);
 const client = new ChatClient(config.opts);
 const talkedRecently = new Set();
 const pajladaID = `11148817`;
+const sleep = (waitTimeInMs) => new Promise(resolve => setTimeout(resolve, waitTimeInMs));
 
 function isUpperCase(str) {
   return str === str.toUpperCase();
@@ -46,12 +47,20 @@ client.on(`message`, async (msg) => {
       client.me(msg.channelName, `PAJAS 🚨 CUNTS`);
     };
 
+    if (msg.senderUserID === `82008718` && msg.msgText.startsWith(`/announce`)) {
+      var pajbotAnnounce = true
+      await sleep(5000)
+      var pajbotAnnounce = false
+    };
+
     // 735710379 = borrowbot
     if (msg.senderUserID === `735710379` && msgText.startsWith(`/announce`)) {
-      let announceMessages = [`gopherDeadlock`, `/announce ℱ`];
-      let announceResponse = announceMessages[Math.floor(Math.random()*announceMessages.length)];
-      client.say(msg.channelName, `${announceResponse}`)
-    }
+      if (pajbotAnnounce == true) {
+        let announceMessages = [`gopherDeadlock`, `/announce ℱ`];
+        let announceResponse = announceMessages[Math.floor(Math.random()*announceMessages.length)];
+        client.say(msg.channelName, `${announceResponse}`)
+      };
+    };
 
     // 477589350 = slchbot
     if (msg.senderUserID === `477589350` && msgText === `pepegasit nevermind`) {
