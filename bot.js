@@ -1,6 +1,7 @@
 `use strict`;
 
 const { ChatClient, AlternateMessageModifier } = require(`@kararty/dank-twitch-irc`);
+const pick = require(`pick-random`);
 const config = require(`./config`);
 const client = new ChatClient(config.opts);
 const talkedRecently = new Set();
@@ -47,8 +48,9 @@ client.on(`message`, async (msg) => {
     };
 
     // 735710379 = borrowbot
-    if (msg.senderUserID === `735710379` && msgText.startsWith(`/announce`)) {
-      client.say(msg.channelName, `/announce ℱ`)
+    if (msg.senderUserID === `103973901` && msgText.startsWith(`/announce`)) {
+      let announceResponse = pickRandom([`gopherDeadlock`, `/announce ℱ`])
+      client.say(msg.channelName, `${announceResponse}`)
     }
 
     // 477589350 = slchbot
