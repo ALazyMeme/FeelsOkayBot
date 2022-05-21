@@ -1,7 +1,7 @@
 `use strict`;
 
+import pickRandom from 'pick-random';
 const { ChatClient, AlternateMessageModifier } = require(`@kararty/dank-twitch-irc`);
-const pick = require(`pick-random`);
 const config = require(`./config`);
 const client = new ChatClient(config.opts);
 const talkedRecently = new Set();
