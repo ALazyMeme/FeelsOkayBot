@@ -47,7 +47,7 @@ client.on(`message`, async (msg) => {
       client.me(msg.channelName, `PAJAS 🚨 CUNTS`);
     };
 
-    if (msg.senderUserID === `82008718` && msg.msgText.startsWith(`/announce`)) {
+    if (msg.senderUserID === `82008718` && msgText.startsWith(`/announce`)) {
       var pajbotAnnounce = true
       sleep(5*1000); // Sleep for 5 seconds
       var pajbotAnnounce = false
