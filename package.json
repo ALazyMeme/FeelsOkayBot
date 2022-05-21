@@ -8,7 +8,6 @@
   "license": "GPL-3.0",
   "packageManager": "yarn@3.2.0",
   "dependencies": {
-    "@kararty/dank-twitch-irc": "4.6.0",
-    "pick-random": "4.0.0"
+    "@kararty/dank-twitch-irc": "4.6.0"
   }
 }
