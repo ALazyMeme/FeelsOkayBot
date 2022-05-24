@@ -46,10 +46,10 @@ client.on(`message`, async (msg) => {
       }, 5*1000);
     };
 
-    // 735710379 = borrowbot
-    if (msg.senderUserID === `735710379` && msgText.startsWith(`/announce`)) {
+    // 170141236 = SonnenBrot
+    if (msg.senderUserID === `170141236` && msgText.startsWith(`/announce`)) {
       if (pajbotAnnounce) {
-        let announceMessages = [`gopherDeadlock`, `/announce ℱ`];
+        let announceMessages = [`gopherDeadlock`, `/announce ℱ FeelsOkayMan`];
         let announceResponse = announceMessages[Math.floor(Math.random()*announceMessages.length)];
         client.say(msg.channelName, `${announceResponse}`)
       };
