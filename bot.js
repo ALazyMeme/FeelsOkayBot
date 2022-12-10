@@ -72,6 +72,11 @@ client.on(`message`, async (msg) => {
       client.say(msg.channelName, `KKarrot test complete KKarrot`)
     };
 
+    // 29557318 = MrDragon12
+    if (msg.senderUserID === `29557318` && msgText === `pepeLaugh` && msg.channelID === `22484632`) {
+      client.say(msg.channelName, 'pepeLaugh')
+    };
+
     // Commands with prefixes
     if (prefixExists) {
       const noPrefix = stripPrefix.toLowerCase(); // Take the stripped message and convert to lowercase
