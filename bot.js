@@ -64,7 +64,7 @@ client.on(`message`, async (msg) => {
       client.say(msg.channelName, `monkaS it's coming`)
     };
 
-    if (msgText.includes(`feelsokaybot`)) {
+    if (msgText.includes(`feelsokaybot`) && msg.channelID === pajladaID) {
       client.say(msg.channelName, `pajaBing`);
     };
 
