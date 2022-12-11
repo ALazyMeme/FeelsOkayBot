@@ -73,7 +73,8 @@ client.on(`message`, async (msg) => {
     };
 
     // 29557318 = MrDragon12
-    if (msg.senderUserID === `29557318` && msgText === `pepeLaugh` && msg.channelID === `22484632`) {
+    // 103973901 = ALazyMeme
+    if ((msg.senderUserID === `29557318` || msg.senderUserID === `103973901`) && msgText === `pepeLaugh` && msg.channelID === `22484632`) {
       client.say(msg.channelName, 'pepeLaugh')
     };
 
