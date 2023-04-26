@@ -26,7 +26,7 @@ client.on(`message`, async (msg) => {
   };
 
   const prefixExists = msg.messageText.startsWith(config.prefix); // Check if prefix exists at start of message
-  const stripPrefix = msg.messageText.replace(/^\S+\s/); // Strip the prefix from the message
+  const stripPrefix = msg.messageText.replace(/^\S+\s/,``); // Strip the prefix from the message
   const msgText = msg.messageText.toLowerCase(); // Convert message to lowercase
   let cooldown = config.defaultCooldown;
 
