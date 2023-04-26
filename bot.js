@@ -88,7 +88,7 @@ client.on(`PRIVMSG`, (msg) => {
         client.reply(msg.channelName, msg.messageID, `No pong 😡`)
       };
 
-      if (command == `st`) {
+      if (command == `st` || command == `smartraveller`) {
         client.reply(msg.channelName, msg.messageID, `https://www.smartraveller.gov.au/destinations/${encodeURIComponent(stripWhitespace.replace(/^st/gi,``).replace(/\S+\s/,`-`))}`)
       };
     };
