@@ -25,7 +25,6 @@ client.on(`PRIVMSG`, (msg) => {
   const prefixExists = msg.messageText.startsWith(config.prefix); // Check if prefix exists at start of message
   const stripPrefix = msg.messageText.substring(1); // Strip the prefix from the message
   const msgText = msg.messageText.toLowerCase(); // Convert message to lowercase
-  const stripWhitespace = stripPrefix.replace(/^\S+\s/,``) // Strip the whitespace from the start
   let cooldown = config.defaultCooldown;
 
   if (talkedRecently.has(msg.senderUserID) && !(msg.senderUserID === config.ownerID)) {
@@ -89,7 +88,7 @@ client.on(`PRIVMSG`, (msg) => {
       };
 
       if (command == `st` || command == `smartraveller`) {
-        client.reply(msg.channelName, msg.messageID, `https://www.smartraveller.gov.au/destinations/${stripWhitespace.replace(/^st/gi,``).replace(/\S+\s/,`-`)}`)
+        client.reply(msg.channelName, msg.messageID, `https://www.smartraveller.gov.au/destinations/${noCommand.replace(/\S+\s/,`-`)}`)
       };
     };
 
