@@ -88,7 +88,7 @@ client.on(`PRIVMSG`, (msg) => {
       };
 
       if (command == `st` || command == `smartraveller`) {
-        client.reply(msg.channelName, msg.messageID, `https://www.smartraveller.gov.au/destinations/${noCommand.replace(/\s+/,'-')}`)
+        client.reply(msg.channelName, msg.messageID, `https://www.smartraveller.gov.au/destinations/${noCommand.join('-')}`)
       };
     };
 
