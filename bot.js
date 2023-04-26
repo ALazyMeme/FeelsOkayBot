@@ -15,11 +15,8 @@ client.on(`close`, (error) => {
   }
 });
 
-client.on(`PRIVMSG`, (msg) => {
+client.on(`PRIVMSG`, async (msg) => {
   console.log(`[#${msg.channelName}] ${msg.displayName}: ${msg.messageText}`);
-});
-
-client.on(`message`, async (msg) => {
   // Ignore all messages from itself
   if (msg.senderUserID === config.botID) { 
     return;
