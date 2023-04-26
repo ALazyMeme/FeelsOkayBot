@@ -75,11 +75,11 @@ client.on(`message`, async (msg) => {
     // Commands with prefixes
     if (prefixExists) {
       const noPrefix = stripPrefix.toLowerCase(); // Take the stripped message and convert to lowercase
-      const command = noPrefix.split(' ')[0]; // Take the command name
-      const noCommand = noPrefix.split(' ').slice(1) // Remove the command
+      const command = noPrefix.split(/\s+/)[0]; // Take the command name
+      const noCommand = noPrefix.split(/\s+/).slice(1) // Remove the command
 
       if (command === `ping`) {
-        client.say(msg.channelName, `alazymDank 🏓 alazymHop 🏓 MrDestructoid`);
+        client.reply(msg.channelName, msg.messageID, `alazymDank 🏓 alazymHop 🏓 MrDestructoid`);
       };
 
       if (command === `echo` && msg.senderUserID === config.ownerID) {
@@ -87,11 +87,11 @@ client.on(`message`, async (msg) => {
       };
 
       if (command == `pong`) {
-        client.say(msg.channelName, `No pong 😡`)
+        client.reply(msg.channelName, msg.messageID, `No pong 😡`)
       };
 
       if (command == `st`) {
-        client.reply(msg.channelName, msg.messageID, `https://www.smartraveller.gov.au/destinations/${encodeURIComponent(stripPrefix.replace(/^st/gi,''))}`)
+        client.reply(msg.channelName, msg.messageID, `https://www.smartraveller.gov.au/destinations/${encodeURIComponent(stripPrefix.replace(/^st/gi,'')).trim()}`)
       };
     };
 
