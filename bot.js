@@ -89,7 +89,7 @@ client.on(`PRIVMSG`, (msg) => {
       };
 
       if (command == `st`) {
-        client.reply(msg.channelName, msg.messageID, `https://www.smartraveller.gov.au/destinations/${encodeURIComponent(stripWhitespace.replace(/^st/gi,``))}`)
+        client.reply(msg.channelName, msg.messageID, `https://www.smartraveller.gov.au/destinations/${encodeURIComponent(stripWhitespace.replace(/^st/gi,``).replace(/\S+\s/,`-`))}`)
       };
     };
 
