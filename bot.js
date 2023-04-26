@@ -25,9 +25,9 @@ client.on(`message`, async (msg) => {
     return;
   };
 
-  const prefixExists = String(msg.messageText).startsWith(config.prefix); // Check if prefix exists at start of message
-  const stripPrefix = String(msg.messageText).substring(1); // Strip the prefix from the message
-  const msgText = String(msg.messageText).toLowerCase(); // Convert message to lowercase
+  const prefixExists = msg.messageText.startsWith(config.prefix); // Check if prefix exists at start of message
+  const stripPrefix = msg.messageText.replace(/^\S+\s/); // Strip the prefix from the message 
+  const msgText = msg.messageText.toLowerCase(); // Convert message to lowercase
   let cooldown = config.defaultCooldown;
 
   if (talkedRecently.has(msg.senderUserID) && !(msg.senderUserID === config.ownerID)) {
@@ -83,7 +83,7 @@ client.on(`message`, async (msg) => {
       };
 
       if (command === `echo` && msg.senderUserID === config.ownerID) {
-        client.say(msg.channelName, stripPrefix.replace(/^echo/gi,``));
+        client.say(msg.channelName, stripPrefix);
       };
 
       if (command == `pong`) {
@@ -91,7 +91,7 @@ client.on(`message`, async (msg) => {
       };
 
       if (command == `st`) {
-        client.reply(msg.channelName, msg.messageID, `https://www.smartraveller.gov.au/destinations/${encodeURIComponent(stripPrefix.replace(/^st/gi,'')).trim()}`)
+        client.reply(msg.channelName, msg.messageID, `https://www.smartraveller.gov.au/destinations/${encodeURIComponent(stripPrefix)}`)
       };
     };
 
