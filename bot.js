@@ -73,7 +73,7 @@ client.on(`PRIVMSG`, (msg) => {
     if (prefixExists) {
       const noPrefix = stripPrefix.toLowerCase(); // Take the stripped message and convert to lowercase
       const command = noPrefix.split(/\s+/)[0]; // Take the command name
-      const noCommand = noPrefix.split(/\s+/).slice(1) // Remove the command
+      const noCommand = noPrefix.split(/\s+/).slice(1); // Remove the command
 
       if (command === `ping`) {
         client.reply(msg.channelName, msg.messageID, `alazymDank 🏓 alazymHop 🏓 MrDestructoid`);
