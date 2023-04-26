@@ -72,11 +72,6 @@ client.on(`message`, async (msg) => {
       client.say(msg.channelName, `KKarrot test complete KKarrot`)
     };
 
-    // 29557318 = MrDragon12
-    if (msg.senderUserID === `29557318` && msgText === `pepelaugh` && msg.channelID === `22484632`) {
-      client.say(msg.channelName, 'pepeLaugh');
-    };
-
     // Commands with prefixes
     if (prefixExists) {
       const noPrefix = stripPrefix.toLowerCase(); // Take the stripped message and convert to lowercase
@@ -93,6 +88,10 @@ client.on(`message`, async (msg) => {
 
       if (command == `pong`) {
         client.say(msg.channelName, `No pong 😡`)
+      };
+
+      if (command == `st`) {
+        client.reply(msg.channelName, msg.messageID, `https://www.smartraveller.gov.au/destinations/${encodeURIComponent(stripPrefix.replace(/^st/gi,''))}`)
       };
     };
 
