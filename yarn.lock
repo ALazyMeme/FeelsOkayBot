@@ -5,12 +5,10 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@kararty/dank-twitch-irc@npm:4.6.0":
-  version: 4.6.0
-  resolution: "@kararty/dank-twitch-irc@npm:4.6.0"
+"@kararty/dank-twitch-irc@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@kararty/dank-twitch-irc@npm:6.0.0"
   dependencies:
-    "@types/debug": ^4.1.7
-    "@types/duplexify": ^3.6.1
     debug-logger: ^0.4.1
     duplexify: ^4.1.2
     eventemitter3: ^4.0.7
@@ -22,39 +20,7 @@ __metadata:
     semaphore-async-await: ^1.5.1
     simple-websocket: ^9.1.0
     split2: ^4.1.0
-  checksum: 033acb02ca0cd8d45e5490057f8033478424b21fd45fcb65f3e239164286c417c61325863617894daec79ec719ac58bc515ce5b2c910876460f4c67aa3f938ef
-  languageName: node
-  linkType: hard
-
-"@types/debug@npm:^4.1.7":
-  version: 4.1.7
-  resolution: "@types/debug@npm:4.1.7"
-  dependencies:
-    "@types/ms": "*"
-  checksum: 0a7b89d8ed72526858f0b61c6fd81f477853e8c4415bb97f48b1b5545248d2ae389931680b94b393b993a7cfe893537a200647d93defe6d87159b96812305adc
-  languageName: node
-  linkType: hard
-
-"@types/duplexify@npm:^3.6.1":
-  version: 3.6.1
-  resolution: "@types/duplexify@npm:3.6.1"
-  dependencies:
-    "@types/node": "*"
-  checksum: 33c43ab4d1d32a2f941d534d65db2cd1c3f93d6a668b00a378585a4d7ec1226f470629e4f8538f9020d0aa7c3dec1847d871fe195c33bbc7d515cb55c66264b7
-  languageName: node
-  linkType: hard
-
-"@types/ms@npm:*":
-  version: 0.7.31
-  resolution: "@types/ms@npm:0.7.31"
-  checksum: daadd354aedde024cce6f5aa873fefe7b71b22cd0e28632a69e8b677aeb48ae8caa1c60e5919bb781df040d116b01cb4316335167a3fc0ef6a63fa3614c0f6da
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:*":
-  version: 17.0.29
-  resolution: "@types/node@npm:17.0.29"
-  checksum: bb9d7bce9d6d3882efd9d63b773b548dce98df4bd57eff8ceaa316aa2f3346e36d3618764cc93da84bbff92005174a35eec3465cde91ee973ef1c351ffa40074
+  checksum: 8d5601d8034b178cb1b07ae10636a089e133b85cc9289e4a4b5aa2754bce153d620b12a8f3b172727d394709a4ba56608d8c96cfd3da054f931f36efef7610c0
   languageName: node
   linkType: hard
 
@@ -62,7 +28,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "FeelsOkayBot@workspace:."
   dependencies:
-    "@kararty/dank-twitch-irc": 4.6.0
+    "@kararty/dank-twitch-irc": ^6.0.0
   languageName: unknown
   linkType: soft
 
